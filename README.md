@@ -9,5 +9,8 @@ It has options for:
 - Sprinting
 - Free-fly mode
 
+## Installation
+Drag proto_controller folder into the "addons" folder at the root of your Godot project. If no addons folder, create one manually.
+
 ## License
 This repo is freely available under the CC0 license. For more info see LICENSE file.
