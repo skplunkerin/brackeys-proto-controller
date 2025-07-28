@@ -1,4 +1,4 @@
-# ProtoController v1.0 by Brackeys
+# ProtoController v1.1 by Brackeys
 # CC0 License
 # Intended for rapid prototyping of first-person games.
 # Happy prototyping!
@@ -54,6 +54,21 @@ var freeflying : bool = false
 @onready var collider: CollisionShape3D = $Collider
 
 func _ready() -> void:
+	# Map WASD keys to movement actions to prevent needing to create project Input
+	# Mappings and editing script.
+	var key_map = {
+		"ui_up": KEY_W,
+		"ui_left": KEY_A,
+		"ui_down": KEY_S,
+		"ui_right": KEY_D,
+	}
+	for action in key_map.keys():
+		var event := InputEventKey.new()
+		event.physical_keycode = key_map[action]
+		# For Godot 3.x, use scancode instead:
+		##event.scancode = key_map[action]
+		InputMap.action_add_event(action, event)
+
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x

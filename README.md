@@ -14,3 +14,7 @@ Drag proto_controller folder into the "addons" folder at the root of your Godot 
 
 ## License
 This repo is freely available under the CC0 license. For more info see LICENSE file.
+
+## Changelog
+- v1.1
+  - Programmatically add WASD key presses to ui_up, ui_left, ui_down, ui_right
