@@ -17,4 +17,5 @@ This repo is freely available under the CC0 license. For more info see LICENSE f
 
 ## Changelog
 - v1.1
-  - Programmatically add WASD key presses to ui_up, ui_left, ui_down, ui_right
+  - Add "Wasd Keys" bool to Input Actions exported group with default false
+  - Programmatically add WASD key presses to ui_up, ui_left, ui_down, ui_right if wasd_keys is true
